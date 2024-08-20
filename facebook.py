@@ -147,7 +147,7 @@ def scriptFB2():
                 # Configuración del servidor SMTP
                 smtp_server = "smtp.gmail.com"
                 smtp_port = 587
-                email_user = "*******+m"
+                email_user = "myprueba365@gmail.com"
                 email_pass = "trgh bpjy ufgh gbnc"
 
                 # Crear el mensaje de correo electrónico con el mensaje de error
@@ -156,14 +156,14 @@ def scriptFB2():
                 message = MIMEText(body, 'plain', 'utf-8')
                 message["Subject"] = subject
                 message["From"] = email_user
-                message["To"] = "newsplaygroup@gmail.com"
+                message["To"] = ""
 
                 try:
                     # Configurar la conexión SMTP
                     server = smtplib.SMTP(smtp_server, smtp_port)
                     server.starttls()
                     server.login(email_user, email_pass)
-                    server.sendmail(email_user, ["newsplaygroup@gmail.com"], message.as_string())
+                    server.sendmail(email_user, ["n"], message.as_string())
                     print("------------ ¡¡Correo electrónico ERROR enviado con éxito!! -------------------")
                 except smtplib.SMTPException as e:
                     print(f"Error al enviar el correo electrónico: {str(e)}")
@@ -173,7 +173,7 @@ def scriptFB2():
                 # Configuración del servidor SMTP
                 smtp_server = "smtp.gmail.com"
                 smtp_port = 587
-                email_user = "myprueba365@gmail.com"
+                email_user = "m"
                 email_pass = "trgh bpjy ufgh gbnc"
 
                 # Crear el mensaje de correo electrónico con el mensaje de error
@@ -182,14 +182,14 @@ def scriptFB2():
                 message = MIMEText(body, 'plain', 'utf-8')
                 message["Subject"] = subject
                 message["From"] = email_user
-                message["To"] = "newsplaygroup@gmail.com"
+                message["To"] = "    "
 
                 try:
                     # Configurar la conexión SMTP
                     server = smtplib.SMTP(smtp_server, smtp_port)
                     server.starttls()
                     server.login(email_user, email_pass)
-                    server.sendmail(email_user, ["newsplaygroup@gmail.com"], message.as_string())
+                    server.sendmail(email_user, [""], message.as_string())
                     print("------------ ¡¡Correo electrónico Proceso correcto enviado con éxito!! -------------------")
                 except smtplib.SMTPException as e:
                     print(f"Error al enviar el correo electrónico correcto: {str(e)}")
@@ -209,8 +209,8 @@ def scriptFB2():
 
             try:
                 # login facebook
-                userName = "Mario Pello"
-                userId = "61555234327598"
+                userName = ""
+                userId = ""
                 errorCookie = False
                 if os.path.getsize(cookies_file) > 0:
                     try:
@@ -225,10 +225,10 @@ def scriptFB2():
                         print(f"****mierda no cookie*****")
                 if os.path.getsize(cookies_file) == 0 or errorCookie == True:
                     user_input = driver.find_element(By.XPATH,"//input[@id='email']")
-                    user_input.send_keys("newsplaygroup@gmail.com")
+                    user_input.send_keys("")
                     time.sleep(2)
                     passwd_input = driver.find_element(By.XPATH,"//input[@id='pass']")
-                    passwd_input.send_keys("Elmarques9")
+                    passwd_input.send_keys("")
                     time.sleep(2)
                     login = driver.find_element(By.XPATH,"//button[@name='login']")
                     login.click()
@@ -308,12 +308,12 @@ def scriptFB2():
                                     pass
 
                                 try:
-                                    userId = "61555234327598"
+                                    userId = ""
                                     user_input = driver.find_element(By.XPATH,"//input[@name='email']")
-                                    user_input.send_keys("newsplaygroup@gmail.com")
+                                    user_input.send_keys("")
                                     time.sleep(2)
                                     passwd_input = driver.find_element(By.XPATH,"//input[@name='pass']")
-                                    passwd_input.send_keys("Elmarques9")
+                                    passwd_input.send_keys("")
                                     time.sleep(2)
                                     
                                     try:
@@ -898,4 +898,3 @@ def scriptFB2():
 
 if __name__ == "__main__":
     scriptFB2()
-
