@@ -147,7 +147,7 @@ def scriptFB2():
                 # Configuración del servidor SMTP
                 smtp_server = "smtp.gmail.com"
                 smtp_port = 587
-                email_user = "myprueba365@gmail.com"
+                email_user = "*******+m"
                 email_pass = "trgh bpjy ufgh gbnc"
 
                 # Crear el mensaje de correo electrónico con el mensaje de error
